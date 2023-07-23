@@ -44,4 +44,5 @@
 - 서버는 사용자의 위치와 단말기의 위치가 100m 이내인 경우 성공(대여실행)을, 그렇지 않은경우 실패(반려) 한다.
 
 ## ERD
-![image](https://github.com/jinlee0/shared-mobility/assets/74762475/323e36aa-910f-4a6d-9061-8fde6276189a)
+![image](https://github.com/jinlee0/shared-mobility/assets/74762475/7cdfb9aa-0923-4e28-a860-de18a624b85d)
+
