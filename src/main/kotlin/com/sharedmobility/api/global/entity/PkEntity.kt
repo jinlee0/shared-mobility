@@ -6,15 +6,15 @@ import java.util.*
 import kotlin.jvm.Transient
 
 @MappedSuperclass
-abstract class PkEntity : Persistable<UUID> {
+abstract class PkEntity : Persistable<String> {
     @Id
-    @Column(columnDefinition = "uuid")
-    private val id: UUID = UUID.randomUUID()
+    @Column(name = "id", columnDefinition = "uuid")
+    private val id: String = UUID.randomUUID().toString()
 
     @Transient
     private var _isNew = true
 
-    override fun getId(): UUID = id
+    override fun getId(): String = id
 
     override fun isNew(): Boolean = _isNew
 

@@ -8,7 +8,7 @@ import java.util.*
 @Entity(name = "station_fav")
 class StationFav(
     @Column(name = "customer_id", columnDefinition = "uuid", nullable = false, updatable = false)
-    val customerId: UUID,
+    val customerId: String,
     @Column(name = "station_id", columnDefinition = "uuid", nullable = false, updatable = false)
-    val stationId: UUID
+    val stationId: String
 ) : PkEntity()
