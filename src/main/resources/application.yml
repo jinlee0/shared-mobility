@@ -7,3 +7,25 @@ spring:
     password: 1234
   jpa:
     show-sql: true
+jwt:
+  secret: 7780b36b5b119d565f94a644716c4e23b267be700986a8d34a56594965e25b7d8780b36b5b119d565f94a644716c4e23b267be700986a8d34a56594965e25b7d880b36b5b119d565f94a644716c4e23b267be700986a8d34a56594965e25b7d8
+  access-token-expired-millis: 86400000
+  refresh-token-expired-millis: 2592000000
+api:
+  version: 1
+  base: /api/v${api.version}
+  pub: ${api.auth.authenticate}, ${api.customer.signup}, ${api.customer.exists_by_email}, ${api.exception.entry-point}, ${api.exception.access-denied-handler}
+  auth:
+    base: ${api.base}/auth
+    authenticate: ${api.auth.base}/authenticate
+  customer:
+    base: ${api.base}/customers
+    signup: ${api.customer.base}/signup
+    exists_by_email: ${api.customer.base}/exists-by-email
+  exception:
+    base: /exception
+    entry-point: ${api.exception.base}/entry-point
+    access-denied-handler: ${api.exception.base}/access-denied-handler
+headers:
+  access-token: ACCESS-TOKEN
+  refresh-token: REFRESH-TOKEN
